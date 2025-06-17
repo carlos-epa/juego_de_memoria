@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("/atardecer.jpg") no-repeat center center fixed;
+    background-position: center;
+    min-width: 100%;
+    background-size: cover;
+}
+
+.contenedor {
+    width: 700px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+   
+}
+
+.contenedor h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.contenedor h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contenedor .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.input-box input {
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 20px 45px 20px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+
+    color: #fff;
+}
+
+
+button{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+
+button:hover {
+    background: rgb(69, 255, 69);
+    transform: translateY(-3px);
+}
+
+.destino-animado {
+    animation: popIn 0.4s ease-in-out;
+}  
+
+@keyframes popIn {
+    from { transform: scale(0.9); opacity: 0.5; }
+    to { transform: scale(1); opacity: 1; }
+}

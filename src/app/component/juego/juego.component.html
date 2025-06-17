@@ -1,0 +1,98 @@
+<body>
+  <main>
+    <!-- JUGADORES -->
+    <aside class="players-section">
+      <!-- <p class="info">
+        <small>NOTA:</small>Refresca la pagina para visualizar los nombres.
+      </p> -->
+      <div class="player" [class.active]="jugadorActual === 1">
+        <h2>{{ nombreJugador1 }}</h2>
+        <p>Aciertos: {{ aciertosJugador1 }}</p>
+        <!-- <p>Victorias: {{ ganadasJugador1 }}</p> -->
+      </div>
+      <div class="player" [class.active]="jugadorActual === 2">
+        <h2>{{ nombreJugador2 }}</h2>
+        <p>Aciertos: {{ aciertosJugador2 }}</p>
+        <!-- <p>Victorias: {{ ganadasJugador2 }}</p> -->
+      </div>
+
+      <div class="player">
+        <!-- Botones de control -->
+        <div class="control-buttons">
+          <!--   <div
+              class="hover-button-container"
+              [class.disabled]="!rondaTerminada"
+            >
+              <div class="hover-tab">▶</div> -->
+          <!-- <button
+            class="hover-button"
+            (click)="siguienteRonda()"
+            [disabled]="!rondaTerminada"
+          >
+            Siguiente Ronda
+          </button> 
+            </div>-->
+
+          <button (click)="irARanking()">Ver Ranking</button>
+          <button (click)="reiniciarDesdeCero()">Reiniciar Juego</button>
+          <!-- <button (click)="cambiarJugador()">Cambiar Jugador</button> -->
+          <button (click)="emitirVolver()">Volver Atras</button>
+        </div>
+      </div>
+    </aside>
+    <section class="section1">
+      <h1>
+        <i class="bx bx-game"></i>
+        Juego de memorias
+        <i class="bx bx-brain"></i>
+      </h1>
+
+      <table>
+        <tr>
+          <td><button id="0" (click)="destapar(0)"></button></td>
+          <td><button id="1" (click)="destapar(1)"></button></td>
+          <td><button id="2" (click)="destapar(2)"></button></td>
+          <td><button id="3" (click)="destapar(3)"></button></td>
+        </tr>
+        <tr>
+          <td><button id="4" (click)="destapar(4)"></button></td>
+          <td><button id="5" (click)="destapar(5)"></button></td>
+          <td><button id="6" (click)="destapar(6)"></button></td>
+          <td><button id="7" (click)="destapar(7)"></button></td>
+        </tr>
+        <tr>
+          <td><button id="8" (click)="destapar(8)"></button></td>
+          <td><button id="9" (click)="destapar(9)"></button></td>
+          <td><button id="10" (click)="destapar(10)"></button></td>
+          <td><button id="11" (click)="destapar(11)"></button></td>
+        </tr>
+        <tr>
+          <td><button id="12" (click)="destapar(12)"></button></td>
+          <td><button id="13" (click)="destapar(13)"></button></td>
+          <td><button id="14" (click)="destapar(14)"></button></td>
+          <td><button id="15" (click)="destapar(15)"></button></td>
+        </tr>
+      </table>
+      <div id="game-board"></div>
+    </section>
+
+    <section class="section2">
+      <h2 id="t-restante" class="estadisticas">
+        Tiempo: {{ tiempo }} segundos
+      </h2>
+      <h2 id="movimientos" class="estadisticas">
+        Movimientos: {{ movimientos }}
+      </h2>
+      <h2 id="ganador" class="estadisticas">{{ ganador }}</h2>
+    </section>
+  </main>
+  <section id="acerca" class="about-section">
+    <!-- Nombre de los desarrolladores -->
+    <h3>Desarrolladores:</h3>
+    <p>
+      Charly Jhoan Murillo Hernandez - 12200263
+      <br />
+      Carlos Eduardo Palacios Angulo - 22200082
+    </p>
+  </section>
+</body>

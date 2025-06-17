@@ -1,0 +1,42 @@
+<div class="Login">
+  <div class="contenedor" *ngIf="!mostrarJuego">
+    <h1>
+      <i class="bx bx-game"></i>
+      Juego de Memorias
+      <i class="bx bx-brain"></i>
+    </h1>
+    <h3>Ingrese los nombres de los jugadores</h3>
+    <form action="">
+      <div class="input-box">
+        <input
+          type="text"
+          [(ngModel)]="nombreJugador1"
+          name="jugador1"
+          placeholder="Nombre del Jugador 1"
+          required
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="text"
+          [(ngModel)]="nombreJugador2"
+          name="jugador2"
+          placeholder="Nombre del Jugador 2"
+          required
+        />
+      </div>
+    </form>
+
+    <button type="button" (click)="irAJuego()">Guardar e Iniciar</button>
+  </div>
+
+  <!-- Juego visible cuando mostrarJuego es true -->
+  <div id="juego" *ngIf="mostrarJuego">
+    <!-- <h2>¡Bienvenidos al juego!</h2>
+        <p>Jugador 1: {{ nombreJugador1 }}</p>
+        <p>Jugador 2: {{ nombreJugador2 }}</p>
+       -->
+
+    <app-juego (volver)="volverAlRegistro()"></app-juego>
+  </div>
+</div>

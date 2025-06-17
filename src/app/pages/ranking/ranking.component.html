@@ -1,0 +1,24 @@
+<body>
+  <div>
+    <h1>Ranking de Ganadores</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Posición</th>
+          <th>Jugador</th>
+          <th>Victorias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let jugador of ranking; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ jugador.nombre }}</td>
+          <td>{{ jugador.victorias }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="control-buttons">
+      <button (click)="volverAlJuego()">Volver al juego</button>
+    </div>
+  </div>
+</body>
